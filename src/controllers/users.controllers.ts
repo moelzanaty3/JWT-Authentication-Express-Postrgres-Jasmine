@@ -1,5 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
+import jwt from 'jsonwebtoken';
 import UserModel from '../models/user.model';
+import config from '../config';
 
 const userModel = new UserModel();
 
@@ -87,3 +89,4 @@ export const deleteOne = async (
     next(err);
   }
 };
+
